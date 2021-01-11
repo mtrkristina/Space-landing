@@ -1,0 +1,206 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+body {
+  width: 100%;
+  margin: 0;
+  width: 100%;
+  max-width: 100%;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+}
+
+h1 {
+  font-size: 56px;
+}
+
+header {
+  height: 640px;
+  width: 100%;
+  background-image: url(images/bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+header .white {
+  background: transparent;
+}
+
+header a {
+  text-decoration: none;
+  color: #FFFFFF;
+}
+
+header a:hover {
+  color: #646F79;
+}
+
+header .btn-success {
+  background-color: #21C87A;
+}
+
+header .row {
+  font-size: 56px;
+  color: #FFFFFF;
+}
+
+header .row .title h6 {
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+header .row .form {
+  background-color: #FFFFFF;
+  width: 450px;
+  border-radius: 5px;
+}
+
+header .row .form h3 {
+  color: #151B26;
+}
+
+header .row .form form button, header .row .form form input {
+  width: 100%;
+  height: 50px;
+}
+
+header .row .form form .btn-success {
+  background-color: #21C87A;
+  font-weight: 600;
+}
+
+header .row .form form .btn-success:hover {
+  background-color: #198754;
+}
+
+section .container .partners .slider {
+  background: white;
+  height: 100px;
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  padding-top: 50px;
+}
+
+section .container .partners .slider::before, section .container .partners .slider::after {
+  background: -webkit-gradient(linear, left top, right top, from(white), to(rgba(255, 255, 255, 0)));
+  background: linear-gradient(to right, white 0%, rgba(255, 255, 255, 0) 100%);
+  content: "";
+  height: 100px;
+  position: absolute;
+  width: 200px;
+  z-index: 2;
+}
+
+section .container .partners .slider::after {
+  right: 0;
+  top: 0;
+  -webkit-transform: rotateZ(180deg);
+          transform: rotateZ(180deg);
+}
+
+section .container .partners .slider::before {
+  left: 0;
+  top: 0;
+}
+
+section .container .partners .slider .slide-track {
+  -webkit-animation: scroll 40s linear infinite;
+          animation: scroll 40s linear infinite;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: calc(250px * 14);
+}
+
+section .container .partners .slider .slide {
+  height: 100px;
+  width: 250px;
+}
+
+@-webkit-keyframes scroll {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(calc(-250px * 7));
+            transform: translateX(calc(-250px * 7));
+  }
+}
+
+@keyframes scroll {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(calc(-250px * 7));
+            transform: translateX(calc(-250px * 7));
+  }
+}
+
+section.container .row {
+  /*&.line{
+              height: 340px;
+              position: relative;
+              &::after{
+                content: "";
+                position: absolute;
+                right: 0px;
+                top: 0;
+                width: 4px;
+                height: 340px;
+                background: $line;
+                box-shadow: 15px 0px 50px rgba(0, 0, 0, 0.15);
+                border-radius: 0px;
+            }*/
+}
+
+section.container h3 {
+  font-size: 24px;
+}
+
+section {
+  margin: 0;
+  padding: 0;
+}
+
+section .container-fluid .carusel {
+  height: 900px;
+  width: 100%;
+  background-color: #F5F8FB;
+}
+
+.bg-img-hero {
+  height: 250px;
+}
+
+/*
+
+//Media requests
+
+@media (max-width: 767px){
+  section{
+    &.methods{
+      &.block-1{
+        &::after{
+          content: none;
+        }
+      }  
+    }
+  }   
+}
+*/
+@media (max-width: 767px) {
+  .screen .form {
+    width: 740px;
+  }
+}
+
+@media (max-width: 992px) {
+  .screen .form {
+    width: 900px;
+  }
+}

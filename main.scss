@@ -1,0 +1,280 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+//Colors
+$white: #FFFFFF;
+$light: #F5F8FB;
+$line: #DEDEDE;
+$grey: #646F79;
+$black: #151B26;
+$green: #21C87A;
+$btn-hover: #198754;
+$purple: #796EFF;
+
+//FONTS
+$font: 'Roboto', sans-serif;
+
+
+//Font size
+$nav-size:16px;
+$t-size:56px;
+$sub-title: 24px;
+$paragrapf: 16px;
+
+//Font weight
+$regular:400;
+$bold:600;
+
+@mixin overlay() {
+  width: 100%;
+  max-width: 100%;
+  font-family: $font;
+  font-style: normal;
+  font-weight: normal;
+}
+
+@mixin form(){
+  position: relative;
+  background-color: $white;
+  font-family: $font;
+  max-width: 430px;
+  height: 400px;
+  left: 1000px;
+  right: 150px;
+  top: 171px;
+  margin-top: 20px;
+  padding-top: 40px;
+  padding-left: 35px;
+  padding-right: 35px;
+  padding-bottom: 40px;
+
+}
+@mixin card(){
+  width: 350px;
+  font-family: $font;
+  font-style: normal;
+  font-weight: normal;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.7);
+  transition: 0.3s;
+  margin: 40px 20px;
+
+}
+
+
+@mixin title-text($font, $t-size, $bold, $dark) {
+    font-family: $font;
+    font-size: $t-size;
+    font-weight: $bold;
+    line-height: 66px;
+    color: $dark;
+}
+
+@mixin box-shadow($x-axis: 0, $y-axis: 1px, $blur: 2px, $color: $dark) {
+    box-shadow: $x-axis $y-axis $blur $color;
+}
+
+
+
+@mixin white-gradient {
+	background: linear-gradient(to right,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
+}
+
+$animationSpeed: 40s;
+
+body{
+  width: 100%;
+  margin: 0;
+  @include overlay;
+}
+h1{
+  font-size: $t-size;
+}
+
+header{
+    height: 640px;
+    width: 100%;
+    background-image: url(images/bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    .white{
+      background: transparent;
+    }
+    a{
+      text-decoration: none;
+      color: $white;
+    }
+
+    a:hover {
+      color: $grey;
+    }
+    .btn-success{
+      background-color: $green;
+    }
+    .row{
+      font-size: $t-size;
+      color: $white;
+      .title{
+        h6{
+          text-transform: uppercase;
+          font-size: $paragrapf;
+          font-weight: $regular;
+        }
+      }
+      .form{
+        background-color: $white;
+        width: 450px;
+        border-radius: 5px;
+        h3{
+          color: $black;
+        }
+        form{
+          button,input {
+            width: 100%;
+            height: 50px;
+          }
+          .btn-success{
+            background-color: $green;
+            font-weight: $bold;
+          }
+          .btn-success:hover{
+            background-color: $btn-hover;
+          }
+        }
+      }
+    }
+}
+//Partners
+section{
+  .container{
+    .partners{
+      .slider {
+        background: white;
+        height: 100px;
+        margin: auto;
+        overflow:hidden;
+        position: relative;
+        width: 100%;
+        padding-top: 50px;
+        
+        &::before,
+        &::after {
+          @include white-gradient;
+          content: "";
+          height: 100px;
+          position: absolute;
+          width: 200px;
+          z-index: 2;
+        }
+        
+        &::after {
+          right: 0;
+          top: 0;
+          transform: rotateZ(180deg);
+        }
+      
+        &::before {
+          left: 0;
+          top: 0;
+        }
+        
+        .slide-track {
+          animation: scroll $animationSpeed linear infinite;
+          display: flex;
+          width: calc(250px * 14);
+        }
+        
+        .slide {
+          height: 100px;
+          width: 250px;
+        }
+      }
+      
+    }
+  }
+}
+
+// Animation
+@keyframes scroll {
+	0% { transform: translateX(0); }
+	100% { transform: translateX(calc(-250px * 7))}
+}
+
+//Methods
+section{
+  &.container{
+      .row{
+            /*&.line{
+              height: 340px;
+              position: relative;
+              &::after{
+                content: "";
+                position: absolute;
+                right: 0px;
+                top: 0;
+                width: 4px;
+                height: 340px;
+                background: $line;
+                box-shadow: 15px 0px 50px rgba(0, 0, 0, 0.15);
+                border-radius: 0px;
+            }*/
+            
+        }
+        h3{
+          font-size: $sub-title;
+        }
+      }
+  }
+
+
+//Carusel
+section{
+  margin: 0;
+  padding: 0;
+  .container-fluid{
+    .carusel{
+      height: 900px;
+      width: 100%;
+      background-color: $light;
+    }
+  }
+}
+
+
+
+.bg-img-hero{
+  height: 250px;
+}
+
+
+
+/*
+
+//Media requests
+
+@media (max-width: 767px){
+  section{
+    &.methods{
+      &.block-1{
+        &::after{
+          content: none;
+        }
+      }  
+    }
+  }   
+}
+*/
+
+@media (max-width: 767px){
+  .screen{
+    .form{
+      width: 740px;
+    }
+    
+  }
+}
+@media (max-width: 992px){
+  .screen{
+    .form{
+      width: 900px;
+    }
+  }
+}
