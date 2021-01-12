@@ -141,8 +141,11 @@ section .container .partners .slider .slide {
   }
 }
 
-section.container .row {
-  /*&.line{
+section.container {
+  /*
+      .row{
+
+            &.line{
               height: 340px;
               position: relative;
               &::after{
@@ -162,6 +165,10 @@ section.container h3 {
   font-size: 24px;
 }
 
+section.container a {
+  color: #21C87A !important;
+}
+
 section {
   margin: 0;
   padding: 0;
@@ -175,6 +182,95 @@ section .container-fluid .carusel {
 
 .bg-img-hero {
   height: 250px;
+  background-size: cover;
+}
+
+.key {
+  height: 35px !important;
+  width: 100px;
+  background-color: rgba(121, 110, 255, 0.1);
+  border-radius: 20px;
+  color: #796EFF;
+  font-size: 14px;
+}
+
+.recomended {
+  margin-left: 100px;
+  padding-top: 7px;
+}
+
+.green {
+  background-color: #21C87A;
+}
+
+.start {
+  text-align: left;
+}
+
+.btn {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.btn-light.btn-block {
+  width: 280px;
+  height: 45px;
+  font-weight: 600;
+}
+
+.btn-block:hover {
+  background-color: #dfe2e7;
+  border-color: #dfe2e7;
+}
+
+.purple {
+  background-color: #796EFF;
+  color: #FFFFFF;
+  width: 280px;
+  height: 45px;
+}
+
+.purple:hover {
+  background-color: #3766bd;
+  color: #FFFFFF !important;
+}
+
+.list-group-item {
+  background-color: none;
+}
+
+/*FOOTER*/
+footer {
+  background-color: #151B26;
+  margin: 0;
+  min-height: 350px;
+}
+
+footer .container a {
+  text-decoration: none;
+  color: #646F79 !important;
+}
+
+footer .container a:hover {
+  color: #FFFFFF !important;
+}
+
+footer .container img {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: block;
+}
+
+footer .container button {
+  margin-top: 100px;
+  width: 109px;
+  height: 41px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #646F79;
+  background-color: #151B26;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 4px;
 }
 
 /*

@@ -9,6 +9,7 @@ $black: #151B26;
 $green: #21C87A;
 $btn-hover: #198754;
 $purple: #796EFF;
+$light-purple: rgba(121, 110, 255, 0.1);
 
 //FONTS
 $font: 'Roboto', sans-serif;
@@ -200,9 +201,10 @@ section{
 
 //Methods
 section{
-  &.container{
+  &.container{/*
       .row{
-            /*&.line{
+
+            &.line{
               height: 340px;
               position: relative;
               &::after{
@@ -216,13 +218,16 @@ section{
                 box-shadow: 15px 0px 50px rgba(0, 0, 0, 0.15);
                 border-radius: 0px;
             }*/
-            
+            h3{
+              font-size: $sub-title;
+            }  
+            a{
+              color: $green !important;
+            }
         }
-        h3{
-          font-size: $sub-title;
-        }
+        
       }
-  }
+  
 
 
 //Carusel
@@ -242,10 +247,86 @@ section{
 
 .bg-img-hero{
   height: 250px;
+  background-size: cover;;
+}
+
+.key{
+  height: 35px !important;
+  width: 100px;
+  background-color: $light-purple;
+  border-radius: 20px;
+  color: $purple;
+  font-size: 14px;
+}
+.recomended{
+  margin-left: 100px;
+  padding-top: 7px;
+}
+.green{
+  background-color: $green;
+}
+.start{
+  text-align: left;
+}
+.btn{
+  transition: 0.3s;
+}
+.btn-light.btn-block{
+  width: 280px;
+  height: 45px;
+  font-weight: $bold;
+  
+}
+.btn-block:hover{
+  background-color: #dfe2e7;
+  border-color:  #dfe2e7;
+}
+.purple{
+  background-color: $purple;
+  color: $white;
+  width: 280px;
+  height: 45px;
+}
+.purple:hover{
+  background-color: #3766bd;
+  color: $white !important;
+}
+
+.list-group-item{
+  background-color: none;
 }
 
 
 
+/*FOOTER*/
+footer{
+  background-color: $black;
+  margin: 0;
+  min-height: 350px;
+  .container{
+    a{
+      text-decoration: none;
+      color: $grey !important;
+    }
+    a:hover{
+      color: $white !important;
+    }
+    img{
+      box-sizing: border-box;
+      display: block;
+    }
+    button{
+      margin-top: 100px;
+      width: 109px;
+      height: 41px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      color: $grey;
+      background-color: $black;
+      box-sizing: border-box;
+      border-radius: 4px;
+    }
+  }
+}
 /*
 
 //Media requests
